@@ -7,12 +7,22 @@
 		<key>CreateGL.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>0</integer>
+			<integer>1</integer>
+		</dict>
+		<key>Playground.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>4</integer>
 		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
 		<key>C4AAD55E1C91A83A00C25865</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>C4AAD5B91C925BC300C25865</key>
 		<dict>
 			<key>primary</key>
 			<true/>
