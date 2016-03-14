@@ -11,19 +11,19 @@
 
 namespace creategl {
 	
-	Translation::Translation (vec3 position) : position(position) {}
+	Translation::Translation (glm::vec3 position) : position(position) {}
 	
-	Translation::Translation (float x, float y, float z) : Translation(vec3(x, y, z)) {}
+	Translation::Translation (float x, float y, float z) : Translation(glm::vec3(x, y, z)) {}
 	
 	Translation::~Translation() {}
 	
-	mat4 Translation::apply (mat4 matrix)
+	glm::mat4 Translation::apply (glm::mat4 matrix)
 	{
 		return translate(matrix, position);
 	}
 	
 	
-	mat4 Translation::revert(mat4 matrix)
+	glm::mat4 Translation::revert(glm::mat4 matrix)
 	{
 		return translate(matrix, -position);
 	}

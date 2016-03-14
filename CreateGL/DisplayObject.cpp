@@ -15,11 +15,11 @@ namespace creategl {
 	}
 	
 	
-	mat4 DisplayObject::getTranslationMatrix ()
+	glm::mat4 DisplayObject::getTranslationMatrix ()
 	{
 		if (_translationIsDirty)
 		{
-			_translationMatrixCache = translate(mat4(1.0), _position);
+			_translationMatrixCache = translate(glm::mat4(1.0), _position);
 			_translationIsDirty = false;
 		}
 		
@@ -27,7 +27,7 @@ namespace creategl {
 	}
 	
 	
-	mat4 DisplayObject::getRotationMatrix ()
+	glm::mat4 DisplayObject::getRotationMatrix ()
 	{
 		if (_rotationIsDirty)
 		{
@@ -39,11 +39,11 @@ namespace creategl {
 	}
 	
 	
-	mat4 DisplayObject::getScalingMatrix()
+	glm::mat4 DisplayObject::getScalingMatrix()
 	{
 		if (_scalingIsDirty)
 		{
-			_scalingMatrixCache = scale(mat4(1.0), _scaling);
+			_scalingMatrixCache = scale(glm::mat4(1.0), _scaling);
 			_scalingIsDirty = false;
 		}
 		
@@ -51,7 +51,7 @@ namespace creategl {
 	}
 	
 	
-	mat4 DisplayObject::getTransformationMatrix ()
+	glm::mat4 DisplayObject::getTransformationMatrix ()
 	{
 		if (_translationIsDirty || _rotationIsDirty || _scalingIsDirty)
 		{
@@ -62,30 +62,30 @@ namespace creategl {
 	}
 	
 	
-	vec3 DisplayObject::getPosition()
+	glm::vec3 DisplayObject::getPosition()
 	{
 		return _position;
 	}
 	
 	
-	vec3 DisplayObject::moveTo (vec3 position)
+	glm::vec3 DisplayObject::moveTo (glm::vec3 position)
 	{
 		// Prevent to set cache dirty
-		if (_position == position) return vec3(0);
-		vec3 rel = position - _position;
+		if (_position == position) return glm::vec3(0);
+		glm::vec3 rel = position - _position;
 		_position = position;
 		_translationIsDirty = true;
 		return rel;
 	}
 	
 	
-	vec3 DisplayObject::moveTo (float x, float y, float z)
+	glm::vec3 DisplayObject::moveTo (float x, float y, float z)
 	{
-		return moveTo(vec3(x, y, z));
+		return moveTo(glm::vec3(x, y, z));
 	}
 	
 	
-	vec3 DisplayObject::moveBy(vec3 movement)
+	glm::vec3 DisplayObject::moveBy(glm::vec3 movement)
 	{
 		_position += movement;
 		_translationIsDirty = true;
@@ -93,19 +93,19 @@ namespace creategl {
 	}
 	
 	
-	vec3 DisplayObject::moveBy (float x, float y, float z)
+	glm::vec3 DisplayObject::moveBy (float x, float y, float z)
 	{
-		return moveBy(vec3(x, y, z));
+		return moveBy(glm::vec3(x, y, z));
 	}
 	
 	
-	quat DisplayObject::getRotationQuaternion ()
+	glm::quat DisplayObject::getRotationQuaternion ()
 	{
 		return _rotation;
 	}
 	
 	
-	void DisplayObject::setRotationQuaternion (quat rotation)
+	void DisplayObject::setRotationQuaternion (glm::quat rotation)
 	{
 		// Prevent to set cache dirty
 		if (_rotation == rotation) return;
@@ -114,10 +114,10 @@ namespace creategl {
 	}
 	
 	
-	vec3 DisplayObject::getRotationAxis ()
+	glm::vec3 DisplayObject::getRotationAxis ()
 	{
 		const float sinAlpha = sin(getRotation());
-		return vec3(_rotation.x / sinAlpha, _rotation.y / sinAlpha, _rotation.z / sinAlpha);
+		return glm::vec3(_rotation.x / sinAlpha, _rotation.y / sinAlpha, _rotation.z / sinAlpha);
 	}
 	
 	
@@ -127,46 +127,46 @@ namespace creategl {
 	}
 	
 	
-	void DisplayObject::setRotation(float angle, vec3 axis)
+	void DisplayObject::setRotation(float angle, glm::vec3 axis)
 	{
-		vec3 normalized = normalize(axis);
+		glm::vec3 normalized = normalize(axis);
 		float alpha = angle / 2.0;
 		float sinAlpha = sin(alpha);
-		setRotationQuaternion(quat(normalized.x * sinAlpha, normalized.y * sinAlpha, normalized.z * sinAlpha, cos(alpha)));
+		setRotationQuaternion(glm::quat(normalized.x * sinAlpha, normalized.y * sinAlpha, normalized.z * sinAlpha, cos(alpha)));
 	}
 	
 	
-	quat DisplayObject::rotate (float angle, vec3 axis)
+	glm::quat DisplayObject::rotate (float angle, glm::vec3 axis)
 	{
-		const vec3 normalized = normalize(axis);
+		const glm::vec3 normalized = normalize(axis);
 		const float alpha = angle / 2.0;
 		const float sinAlpha = sin(alpha);
-		const quat rotation = quat(normalized.x * sinAlpha, normalized.y * sinAlpha, normalized.z * sinAlpha, cos(alpha));
+		const glm::quat rotation = glm::quat(normalized.x * sinAlpha, normalized.y * sinAlpha, normalized.z * sinAlpha, cos(alpha));
 		setRotationQuaternion(normalize(_rotation * rotation));
 		return _rotation;
 	}
 	
 	
-	quat DisplayObject::rotate (float angle, float x, float y, float z)
+	glm::quat DisplayObject::rotate (float angle, float x, float y, float z)
 	{
-		return rotate(angle, vec3(x, y, z));
+		return rotate(angle, glm::vec3(x, y, z));
 	}
 	
 	
-	quat DisplayObject::rotateX (float angle)
+	glm::quat DisplayObject::rotateX (float angle)
 	{
-		return rotate(angle, vec3(1, 0, 0));
+		return rotate(angle, glm::vec3(1, 0, 0));
 	}
 	
 	
-	quat DisplayObject::rotateY (float angle)
+	glm::quat DisplayObject::rotateY (float angle)
 	{
-		return rotate(angle, vec3(0, 1, 0));
+		return rotate(angle, glm::vec3(0, 1, 0));
 	}
 	
 	
-	quat DisplayObject::rotateZ (float angle)
+	glm::quat DisplayObject::rotateZ (float angle)
 	{
-		return rotate(angle, vec3(0, 0, 1));
+		return rotate(angle, glm::vec3(0, 0, 1));
 	}
 }

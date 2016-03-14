@@ -17,7 +17,7 @@
 using namespace std;
 
 namespace creategl {
-	class Container : public virtual DisplayObject
+	class Container : public DisplayObject
 	{
 	private:
 		
@@ -65,7 +65,7 @@ namespace creategl {
 		 * Adds a new child to the container and returns the count of children
 		 * @param displayObject
 		 */
-		long addChild (DisplayObject* displayObject);
+		virtual long addChild (DisplayObject* displayObject);
 		
 		
 		/**
@@ -100,14 +100,14 @@ namespace creategl {
 		 * Removes the child at given index and returns it
 		 * @param index
 		 */
-		DisplayObject* removeChild (long index);
+		virtual DisplayObject* removeChild (long index);
 		
 		
 		/**
 		 * Removes the child from container and returns its index
 		 * @param displayObject
 		 */
-		long removeChild (DisplayObject* displayObject);
+		virtual long removeChild (DisplayObject* displayObject);
 	};
 }
 #endif /* Container_hpp */

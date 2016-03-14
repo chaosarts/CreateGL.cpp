@@ -16,7 +16,6 @@
 #include "Transformation.hpp"
 
 using namespace std;
-using namespace glm;
 
 namespace creategl {
 	
@@ -41,13 +40,13 @@ namespace creategl {
 		
 		
 		/** Provides the transformation matrix */
-		mat4 _cache = mat4(1.0);
+		glm::mat4 _cache = glm::mat4(1.0);
 		
 	public:
 		/**
 		 * Returns the transformation matrix
 		 */
-		mat4 getMatrix ();
+		glm::mat4 getMatrix ();
 		
 		/**
 		 *

@@ -12,15 +12,13 @@
 #include <stdio.h>
 #include <glm/glm.hpp>
 
-using namespace glm;
-
 namespace creategl {
 	struct Transformation
 	{
 	public:
 		virtual ~Transformation () {};
-		virtual mat4 apply (mat4 matrix) = 0;
-		virtual mat4 revert (mat4 matrix) = 0;
+		virtual glm::mat4 apply (glm::mat4 matrix) = 0;
+		virtual glm::mat4 revert (glm::mat4 matrix) = 0;
 	};
 }
 

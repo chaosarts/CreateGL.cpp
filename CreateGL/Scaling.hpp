@@ -13,17 +13,15 @@
 #include <glm/gtc/matrix_transform.hpp>
 #include "Transformation.hpp"
 
-using namespace glm;
-
 namespace creategl {
 	struct Scaling : public Transformation
 	{
 	public:
 		/** Provides the scaling value of the transformation */
-		vec3 scaling;
+		glm::vec3 scaling;
 		
 		/** Creates a new scaling transformtaion */
-		Scaling(vec3 scaling);
+		Scaling(glm::vec3 scaling);
 		
 		/** Creates a new scaling transformtaion */
 		Scaling(float x, float y, float z);
@@ -32,10 +30,10 @@ namespace creategl {
 		virtual ~Scaling ();
 		
 		/** Applies the transformation */
-		mat4 apply (mat4 matrix);
+		glm::mat4 apply (glm::mat4 matrix);
 		
 		/** Discards the transformation */
-		virtual mat4 revert (mat4 matrix);
+		virtual glm::mat4 revert (glm::mat4 matrix);
 	};
 }
 #endif /* Scaling_hpp */

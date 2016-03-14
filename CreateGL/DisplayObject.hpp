@@ -16,15 +16,14 @@
 
 #include "BoundingBox.hpp"
 
-using namespace glm;
-using namespace glm;
-
 namespace creategl {
 	class Container;
+	class Stage;
 	
 	class DisplayObject
 	{
 		friend class Container;
+		friend class Stage;
 	private:
 		
 		/** Indicates if the transformation needs an update */
@@ -39,29 +38,32 @@ namespace creategl {
 		/** Provides the parent container */
 		Container* _parent = nullptr;
 		
+		/** Provides the stage in which the */
+		Stage* _stage = nullptr;
+		
 		/** Provides the position of the object */
-		vec3 _position = vec3(0);
+		glm::vec3 _position = glm::vec3(0);
 		
 		/** Provides the rotation of the object */
-		quat _rotation = quat(1.0, 0.0, 0.0, 0.0);
+		glm::quat _rotation = glm::quat(1.0, 0.0, 0.0, 0.0);
 		
 		/** Provides the scaling for each dimension */
-		vec3 _scaling = vec3(1.0, 1.0, 1.0);
+		glm::vec3 _scaling = glm::vec3(1.0, 1.0, 1.0);
 		
 		/** Provids the reference point to relate to for transformation */
-		vec3 _reference = vec3(0);
+		glm::vec3 _reference = glm::vec3(0);
 		
 		/** Caches the translation matrix */
-		mat4 _translationMatrixCache = mat4(1.0);
+		glm::mat4 _translationMatrixCache = glm::mat4(1.0);
 		
 		/** Caches the rotation matrix */
-		mat4 _rotationMatrixCache = mat4(1.0);
+		glm::mat4 _rotationMatrixCache = glm::mat4(1.0);
 		
 		/** Caches the scaling matrix */
-		mat4 _scalingMatrixCache = mat4(1.0);
+		glm::mat4 _scalingMatrixCache = glm::mat4(1.0);
 		
 		/** Caches the complete transformation matrix */
-		mat4 _transformMatrixCache = mat4(1.0);
+		glm::mat4 _transformMatrixCache = glm::mat4(1.0);
 		
 	protected:
 		
@@ -90,33 +92,33 @@ namespace creategl {
 		 * Returns the translation matrix according to performed rotation
 		 * on this display object
 		 */
-		mat4 getTranslationMatrix ();
+		glm::mat4 getTranslationMatrix ();
 		
 		
 		/**
 		 * Returns the rotation matrix according to performed rotation
 		 * on this display object
 		 */
-		mat4 getRotationMatrix ();
+		glm::mat4 getRotationMatrix ();
 		
 		
 		/**
 		 * Returns the scaling matrix according to performed rotation
 		 * on this display object
 		 */
-		mat4 getScalingMatrix ();
+		glm::mat4 getScalingMatrix ();
 		
 		
 		/**
 		 * Returns the transformation matrix
 		 */
-		mat4 getTransformationMatrix ();
+		glm::mat4 getTransformationMatrix ();
 		
 		
 		/**
 		 * Returns the position of the object
 		 */
-		vec3 getPosition ();
+		glm::vec3 getPosition ();
 		
 		
 		/**
@@ -125,7 +127,7 @@ namespace creategl {
 		 * @param position
 		 * @return The movement relative to prev pos
 		 */
-		vec3 moveTo (vec3 position);
+		glm::vec3 moveTo (glm::vec3 position);
 		
 		
 		/**
@@ -136,7 +138,7 @@ namespace creategl {
 		 * @param z The z coordinate
 		 * @return The realtive movement to the previous position
 		 */
-		vec3 moveTo (float x, float y, float z);
+		glm::vec3 moveTo (float x, float y, float z);
 		
 		
 		/**
@@ -145,7 +147,7 @@ namespace creategl {
 		 * @param movement The relative movement to the current position
 		 * @return The new absolute pos
 		 */
-		vec3 moveBy (vec3 movement);
+		glm::vec3 moveBy (glm::vec3 movement);
 		
 		
 		/**
@@ -156,25 +158,25 @@ namespace creategl {
 		 * @param z The z coordinate
 		 * @return The realtive movement to the previous position
 		 */
-		vec3 moveBy (float x, float y, float z);
+		glm::vec3 moveBy (float x, float y, float z);
 		
 		
 		/**
-		 * Returns the rotation quaterion
+		 * Returns the rotation glm::quaterion
 		 */
-		quat getRotationQuaternion ();
+		glm::quat getRotationQuaternion ();
 		
 		
 		/**
-		 * Sets the rotation directly by a quaternion
+		 * Sets the rotation directly by a glm::quaternion
 		 */
-		void setRotationQuaternion (quat rotation);
+		void setRotationQuaternion (glm::quat rotation);
 		
 		
 		/**
 		 * Returns the current rotation axis
 		 */
-		vec3 getRotationAxis ();
+		glm::vec3 getRotationAxis ();
 		
 		
 		/**
@@ -186,37 +188,37 @@ namespace creategl {
 		/**
 		 * Sets the rotation of the object absolute
 		 */
-		void setRotation (float rad, vec3 axis);
+		void setRotation (float rad, glm::vec3 axis);
 		
 		
 		/**
 		 * Rotates the object around the given axis by given angle in rad
 		 */
-		quat rotate (float rad, vec3 axis);
+		glm::quat rotate (float rad, glm::vec3 axis);
 		
 		
 		/**
 		 * Rotates the object around the given axis by given angle in rad
 		 */
-		quat rotate (float rad, float x, float y, float z);
+		glm::quat rotate (float rad, float x, float y, float z);
 		
 		
 		/**
 		 * Rotates the object around the x axis by given angle in rad
 		 */
-		quat rotateX (float rad);
+		glm::quat rotateX (float rad);
 		
 		
 		/**
 		 * Rotates the object around the x axis by given angle in rad
 		 */
-		quat rotateY (float rad);
+		glm::quat rotateY (float rad);
 		
 		
 		/**
 		 * Rotates the object around the x axis by given angle in rad
 		 */
-		quat rotateZ (float rad);
+		glm::quat rotateZ (float rad);
 	};
 }
 

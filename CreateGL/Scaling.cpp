@@ -10,18 +10,18 @@
 
 namespace creategl {
 	
-	Scaling::Scaling (vec3 scaling) : scaling(scaling) {}
+	Scaling::Scaling (glm::vec3 scaling) : scaling(scaling) {}
 	
-	Scaling::Scaling (float x, float y, float z) : Scaling(vec3(x, y, z)) {}
+	Scaling::Scaling (float x, float y, float z) : Scaling(glm::vec3(x, y, z)) {}
 	
 	Scaling::~Scaling() {}
 	
-	mat4 Scaling::apply (mat4 matrix)
+	glm::mat4 Scaling::apply (glm::mat4 matrix)
 	{
 		return glm::scale(matrix, scaling);
 	}
 	
-	mat4 Scaling::revert (mat4 matrix)
+	glm::mat4 Scaling::revert (glm::mat4 matrix)
 	{
 		return glm::scale(matrix, -scaling);
 	}

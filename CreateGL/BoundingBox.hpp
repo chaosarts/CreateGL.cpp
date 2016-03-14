@@ -12,8 +12,6 @@
 #include <stdio.h>
 #include <glm/glm.hpp>
 
-using namespace glm;
-
 namespace creategl {
 	struct BoundingBox
 	{
@@ -56,7 +54,7 @@ namespace creategl {
 		 * @param height
 		 * @param depth
 		 */
-		BoundingBox(vec3 center, float width, float height, float depth);
+		BoundingBox(glm::vec3 center, float width, float height, float depth);
 		
 		/**
 		 * Creates a new symetric bounding box around the center being zero
@@ -88,7 +86,7 @@ namespace creategl {
 		float getDepth ();
 		
 		
-		vec3 getCenter ();
+		glm::vec3 getCenter ();
 	};
 }
 #endif /* BoundingBox_hpp */

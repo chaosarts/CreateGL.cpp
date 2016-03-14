@@ -30,10 +30,15 @@ namespace creategl {
 		if (_boundingBoxIsDirty)
 		{			
 			vector<DisplayObject*>::iterator it = _children.begin();
-
 			while (it != _children.end())
 			{
-				
+				BoundingBox box = (*it++)->getBounds();
+				_boundingBox.left = std::min(_boundingBox.left, box.left);
+				_boundingBox.right = std::max(_boundingBox.right, box.right);
+				_boundingBox.bottom = std::min(_boundingBox.bottom, box.bottom);
+				_boundingBox.top = std::max(_boundingBox.top, box.top);
+				_boundingBox.near = std::min(_boundingBox.near, box.near);
+				_boundingBox.far = std::max(_boundingBox.far, box.far);
 			}
 		}
 		
@@ -52,6 +57,10 @@ namespace creategl {
 		if (Container* c = dynamic_cast<Container*>(displayObject))
 			if (c == this || c->isAncestorOf(this)) return _children.size() - 1;
 		
+		if (displayObject->_parent != nullptr)
+			displayObject->_parent->removeChild(displayObject);
+		
+		displayObject->_parent = this;
 		_children.push_back(displayObject);
 		return _children.size() - 1;
 	}
@@ -72,7 +81,7 @@ namespace creategl {
 	
 	DisplayObject* Container::childAt (long index)
 	{
-		if (index < 0 || index > _children.size()) return nullptr;
+		if (index < 0 || index >= _children.size()) return nullptr;
 		return _children.at(index);
 	}
 	
@@ -91,6 +100,18 @@ namespace creategl {
 	}
 	
 	
+	DisplayObject* Container::removeChild(long index)
+	{
+		if (index < 0 || index >= count()) return nullptr;
+		
+		DisplayObject* child = _children[index];
+		vector<DisplayObject*>::iterator it = (_children.begin() + index);
+		_children.erase(it);
+		
+		return child;
+	}
+	
+	
 	long Container::removeChild(creategl::DisplayObject *displayObject)
 	{
 		long index = indexOf(displayObject);
@@ -100,17 +121,5 @@ namespace creategl {
 		_children.erase(it);
 		
 		return index;
-	}
-	
-	
-	DisplayObject* Container::removeChild(long index)
-	{
-		if (index < 0 || index > count()) return nullptr;
-		
-		DisplayObject* child = _children[index];
-		vector<DisplayObject*>::iterator it = (_children.begin() + index);
-		_children.erase(it);
-		
-		return child;
 	}
 }

@@ -7,32 +7,41 @@
 //
 
 #include <iostream>
+#include <stdarg.h>
+#include <list>
+#include <initializer_list>
+#include <glm/glm.hpp>
 
-class A {
-public:
-	int x = 1;
-	
-	A () {
-		x = 2;
-	}
-	
-	A (int x) : x(x) {
-		
-	}
-};
+using namespace std;
 
-
-class B : public A
+void log (const char* format, ...)
 {
-public:
-	B () : A(4) {
-		
-	}
-};
-
+	va_list aptr;
+	va_start(aptr, format);
+	vfprintf(stderr, format, aptr);
+	va_end(aptr);
+}
 
 int main(int argc, const char * argv[]) {
-	B* b = new B();
-	fprintf(stderr, "%i", b->x);
+	void* data = malloc(sizeof(float) + sizeof(double) + sizeof(int));
+	void* ptr = data;
+	
+	*((float*) ptr) = (float) 1.0;
+	
+	ptr = (void*)(((float*) ptr) + 1);
+	*((double*) ptr) = (double) 2.0;
+	
+	ptr = (void*)(((double*) ptr) + 1);
+	*((int*) ptr) = (int) 3;
+	
+	ptr = data;
+	log("%f\n", *((float*) ptr));
+	
+	ptr = (void*)(((float*) ptr) + 1);
+	log("%f\n", *((double*) ptr));
+	
+	ptr = (void*)(((double*) ptr) + 1);
+	log("%i\n", *((int*) ptr));
+
     return 0;
 }

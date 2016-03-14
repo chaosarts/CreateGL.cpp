@@ -1,20 +1,28 @@
 {
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "1F69EBE6E5876D05490EF85699418AD7B5FEABC1",
   "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
 
   },
   "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
     "656B614F13419EF3DB4660CCF49EAB3898D9F2C5" : 0,
-    "93CCD311B21D40CA5DDB27DD6C4D6EF706A315B3" : 0
+    "93CCD311B21D40CA5DDB27DD6C4D6EF706A315B3" : 0,
+    "1F69EBE6E5876D05490EF85699418AD7B5FEABC1" : 0
   },
   "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "595C4AE4-068B-408E-B050-2EA4ABFF8848",
   "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
     "656B614F13419EF3DB4660CCF49EAB3898D9F2C5" : "ChaosCore\/",
-    "93CCD311B21D40CA5DDB27DD6C4D6EF706A315B3" : "ChaosGL\/"
+    "93CCD311B21D40CA5DDB27DD6C4D6EF706A315B3" : "ChaosGL\/",
+    "1F69EBE6E5876D05490EF85699418AD7B5FEABC1" : "CreateGL\/"
   },
   "DVTSourceControlWorkspaceBlueprintNameKey" : "CreateGL",
   "DVTSourceControlWorkspaceBlueprintVersion" : 204,
   "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "CreateGL.xcodeproj",
   "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/chaosarts\/CreateGL.cpp.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "1F69EBE6E5876D05490EF85699418AD7B5FEABC1"
+    },
     {
       "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/chaosarts\/ChaosCore.cpp.git",
       "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",

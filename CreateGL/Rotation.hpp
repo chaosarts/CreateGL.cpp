@@ -14,8 +14,6 @@
 #include <glm/gtc/quaternion.hpp>
 #include "Transformation.hpp"
 
-using namespace glm;
-
 namespace creategl {
 	struct Rotation : public Transformation
 	{
@@ -25,22 +23,22 @@ namespace creategl {
 		float rad;
 		
 		/** Provides the rotation axis */
-		vec3 axis;
+		glm::vec3 axis;
 		
 		/** Creates a rotation transformation */
 		Rotation (float rad, float x, float y, float z);
 		
 		/** Creates a rotation transformation */
-		Rotation (float rad, vec3 axis);
+		Rotation (float rad, glm::vec3 axis);
 		
 		/** Destroys the transformation */
 		virtual ~Rotation ();
 		
 		/** Applies the transformation to the matrix */
-		virtual mat4 apply (mat4 matrix);
+		virtual glm::mat4 apply (glm::mat4 matrix);
 		
 		/** Discards the transformation */
-		virtual mat4 revert (mat4 matrix);
+		virtual glm::mat4 revert (glm::mat4 matrix);
 	};
 }
 #endif /* Rotation_hpp */

@@ -6,7 +6,10 @@
 //  Copyright © 2016 Fu Lam Diep. All rights reserved.
 //
 
+#include <algorithm>
 #include "BoundingBox.hpp"
+
+using namespace std;
 
 namespace creategl {
 	
@@ -19,8 +22,7 @@ namespace creategl {
 	}
 	
 	
-	BoundingBox::BoundingBox(vec3 center, float width, float height, float depth) :
-		BoundingBox(-width, width, )
+	BoundingBox::BoundingBox(glm::vec3 center, float width, float height, float depth)
 	{
 		const float halfWidth = width / 2;
 		const float halfHeight = height / 2;
@@ -35,7 +37,7 @@ namespace creategl {
 	}
 	
 	
-	BoundingBox::BoundingBox(float width, float height, float depth) : BoundingBox(vec3(0.0), width, height, depth)
+	BoundingBox::BoundingBox(float width, float height, float depth) : BoundingBox(glm::vec3(0.0), width, height, depth)
 	{
 		
 	}
@@ -65,8 +67,8 @@ namespace creategl {
 	}
 	
 	
-	vec3 BoundingBox::getCenter()
+	glm::vec3 BoundingBox::getCenter()
 	{
-		return vec3((right - left) / 2, (top - bottom) / 2, (far - near) / 2);
+		return glm::vec3((right - left) / 2, (top - bottom) / 2, (far - near) / 2);
 	}
 }

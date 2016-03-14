@@ -11,7 +11,7 @@
 
 namespace creategl {
 	
-	mat4 TransformSequence::getMatrix()
+	glm::mat4 TransformSequence::getMatrix()
 	{
 		// Handle all new tranformations
 		while (_new.size() > 0) {
@@ -31,7 +31,7 @@ namespace creategl {
 	
 	void TransformSequence::reset ()
 	{
-		_cache = mat4(1.0);
+		_cache = glm::mat4(1.0);
 		_new.clear();
 		
 		while (!_undone.empty())

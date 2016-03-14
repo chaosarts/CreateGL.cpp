@@ -13,18 +13,16 @@
 #include <glm/gtc/matrix_transform.hpp>
 #include "Transformation.hpp"
 
-using namespace glm;
-
 namespace creategl {
 	struct Translation : public Transformation
 	{
 	public:
 		
 		/** Provides the vector, that indicates in which direection to translate */
-		vec3 position;
+		glm::vec3 position;
 		
 		/** Creates a new translate transformation */
-		Translation(vec3 position);
+		Translation(glm::vec3 position);
 		
 		/** Creates a new translate transformation */
 		Translation(float x, float y, float z);
@@ -33,10 +31,10 @@ namespace creategl {
 		virtual ~Translation ();
 		
 		/** Applies the transformation to according matrix */
-		mat4 apply (mat4 matrix);
+		glm::mat4 apply (glm::mat4 matrix);
 		
 		/** Discards the transformation */
-		virtual mat4 revert (mat4 matrix);
+		virtual glm::mat4 revert (glm::mat4 matrix);
 	};
 }
 #endif /* Translation_hpp */
