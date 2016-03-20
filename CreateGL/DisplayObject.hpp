@@ -9,12 +9,11 @@
 #ifndef DisplayObject_hpp
 #define DisplayObject_hpp
 
-#include <stdio.h>
 #include <glm/glm.hpp>
 #include <glm/gtc/matrix_transform.hpp>
 #include <glm/gtc/quaternion.hpp>
 
-#include "BoundingBox.hpp"
+#include "bbox.hpp"
 
 namespace creategl {
 	class Container;
@@ -68,10 +67,10 @@ namespace creategl {
 	protected:
 		
 		/** Provides the bounding box */
-		BoundingBox _boundingBox = BoundingBox();
+		bbox _bbox = bbox();
 		
 		/** Indicates, whether the box is obsolete or not */
-		bool _boundingBoxIsDirty = false;
+		bool _bboxIsDirty = false;
 		
 	public:
 		
@@ -85,7 +84,7 @@ namespace creategl {
 		 * Returns the bounding box
 		 * @return The bounding box of the object
 		 */
-		virtual BoundingBox getBounds () = 0;
+		virtual bbox getBounds () = 0;
 		
 		
 		/**
@@ -110,9 +109,19 @@ namespace creategl {
 		
 		
 		/**
-		 * Returns the transformation matrix
+		 * Returns the transformation matrix for world space
+		 * @return A 4x4 matrix, that describes the transformation of the display object
+		 * considering direct transformation and transformation of the parent object
 		 */
-		glm::mat4 getTransformationMatrix ();
+		glm::mat4 getGlobalTransformation ();
+		
+		
+		/**
+		 * Returns the transformation matrix for object space
+		 * @return A 4x4 matrix, that describes the transformation, which has been
+		 * contributed directly on this display object
+		 */
+		glm::mat4 getLocalTransformation ();
 		
 		
 		/**

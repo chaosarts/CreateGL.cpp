@@ -16,33 +16,14 @@ namespace creategl {
 	Container::~Container () {}
 	
 	
-	long Container::count () {return _children.size();}
-	
-	
-	vector<DisplayObject*> Container::getChildren ()
-	{
-		return _children;
+	long Container::count () const {
+		return _children.size();
 	}
 	
 	
-	BoundingBox Container::getBounds()
+	vector<DisplayObject*> Container::getChildren () const
 	{
-		if (_boundingBoxIsDirty)
-		{			
-			vector<DisplayObject*>::iterator it = _children.begin();
-			while (it != _children.end())
-			{
-				BoundingBox box = (*it++)->getBounds();
-				_boundingBox.left = std::min(_boundingBox.left, box.left);
-				_boundingBox.right = std::max(_boundingBox.right, box.right);
-				_boundingBox.bottom = std::min(_boundingBox.bottom, box.bottom);
-				_boundingBox.top = std::max(_boundingBox.top, box.top);
-				_boundingBox.near = std::min(_boundingBox.near, box.near);
-				_boundingBox.far = std::max(_boundingBox.far, box.far);
-			}
-		}
-		
-		return _boundingBox;
+		return _children;
 	}
 	
 	
@@ -79,7 +60,7 @@ namespace creategl {
 	}
 	
 	
-	DisplayObject* Container::childAt (long index)
+	DisplayObject* Container::childAt (long index) 
 	{
 		if (index < 0 || index >= _children.size()) return nullptr;
 		return _children.at(index);
@@ -121,5 +102,26 @@ namespace creategl {
 		_children.erase(it);
 		
 		return index;
+	}
+	
+	
+	bbox Container::getBounds()
+	{
+		if (_bboxIsDirty)
+		{
+			vector<DisplayObject*>::iterator it = _children.begin();
+			while (it != _children.end())
+			{
+				bbox box = (*it++)->getBounds();
+				_bbox.left = std::min(_bbox.left, box.left);
+				_bbox.right = std::max(_bbox.right, box.right);
+				_bbox.bottom = std::min(_bbox.bottom, box.bottom);
+				_bbox.top = std::max(_bbox.top, box.top);
+				_bbox.near = std::min(_bbox.near, box.near);
+				_bbox.far = std::max(_bbox.far, box.far);
+			}
+		}
+		
+		return _bbox;
 	}
 }

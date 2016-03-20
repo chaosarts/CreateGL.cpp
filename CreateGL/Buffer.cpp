@@ -1,9 +1,9 @@
 //
-//  Shape.cpp
+//  Buffer.cpp
 //  CreateGL
 //
-//  Created by Fu Lam Diep on 11.03.16.
+//  Created by Fu Lam Diep on 18.03.16.
 //  Copyright © 2016 Fu Lam Diep. All rights reserved.
 //
 
-#include "Shape.hpp"
+#include "Buffer.hpp"

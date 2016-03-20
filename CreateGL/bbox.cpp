@@ -1,5 +1,5 @@
 //
-//  BoundingBox.cpp
+//  bbox.cpp
 //  CreateGL
 //
 //  Created by Fu Lam Diep on 10.03.16.
@@ -7,13 +7,13 @@
 //
 
 #include <algorithm>
-#include "BoundingBox.hpp"
+#include "bbox.hpp"
 
 using namespace std;
 
 namespace creategl {
 	
-	BoundingBox::BoundingBox(float left, float right, float bottom, float top, float near, float far) :
+	bbox::bbox(float left, float right, float bottom, float top, float near, float far) :
 		left(min(left, right)), right(max(left, right)),
 		bottom(min(bottom, top)), top(max(bottom, top)),
 		near(min(near, far)), far(max(near, far))
@@ -22,7 +22,7 @@ namespace creategl {
 	}
 	
 	
-	BoundingBox::BoundingBox(glm::vec3 center, float width, float height, float depth)
+	bbox::bbox(glm::vec3 center, float width, float height, float depth)
 	{
 		const float halfWidth = width / 2;
 		const float halfHeight = height / 2;
@@ -37,37 +37,37 @@ namespace creategl {
 	}
 	
 	
-	BoundingBox::BoundingBox(float width, float height, float depth) : BoundingBox(glm::vec3(0.0), width, height, depth)
+	bbox::bbox(float width, float height, float depth) : bbox(glm::vec3(0.0), width, height, depth)
 	{
 		
 	}
 	
 	
-	BoundingBox::BoundingBox() : BoundingBox(0, 0, 0, 0, 0, 0) {}
+	bbox::bbox() : bbox(0, 0, 0, 0, 0, 0) {}
 	
 	
-	BoundingBox::~BoundingBox () {}
+	bbox::~bbox () {}
 	
 	
-	float BoundingBox::getWidth()
+	float bbox::getWidth()
 	{
 		return abs(right - left);
 	}
 	
 	
-	float BoundingBox::getHeight()
+	float bbox::getHeight()
 	{
 		return abs(top - bottom);
 	}
 	
 	
-	float BoundingBox::getDepth()
+	float bbox::getDepth()
 	{
 		return abs(far - near);
 	}
 	
 	
-	glm::vec3 BoundingBox::getCenter()
+	glm::vec3 bbox::getCenter()
 	{
 		return glm::vec3((right - left) / 2, (top - bottom) / 2, (far - near) / 2);
 	}

@@ -6,7 +6,7 @@
 //  Copyright © 2016 Fu Lam Diep. All rights reserved.
 //
 
-#include "Translation.hpp"
+#include "translation.hpp"
 
 
 namespace creategl {

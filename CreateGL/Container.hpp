@@ -38,21 +38,15 @@ namespace creategl {
 		
 		
 		/**
-		 * Returns the bounding box of the container
-		 */
-		virtual BoundingBox getBounds ();
-		
-		
-		/**
 		 * Returns the count of children contained in this container
 		 */
-		long count ();
+		long count () const;
 		
 		
 		/**
 		 * Returns the list of children
 		 */
-		vector<DisplayObject*> getChildren ();
+		vector<DisplayObject*> getChildren () const;
 		
 		
 		/**
@@ -108,6 +102,12 @@ namespace creategl {
 		 * @param displayObject
 		 */
 		virtual long removeChild (DisplayObject* displayObject);
+		
+		
+		/**
+		 * Returns the bounding box of the container
+		 */
+		virtual bbox getBounds ();
 	};
 }
 #endif /* Container_hpp */

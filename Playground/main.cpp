@@ -6,42 +6,35 @@
 //  Copyright © 2016 Fu Lam Diep. All rights reserved.
 //
 
-#include <iostream>
-#include <stdarg.h>
-#include <list>
-#include <initializer_list>
+#include <type_traits>
 #include <glm/glm.hpp>
-
-using namespace std;
-
-void log (const char* format, ...)
-{
-	va_list aptr;
-	va_start(aptr, format);
-	vfprintf(stderr, format, aptr);
-	va_end(aptr);
-}
+#include <ChaosCore/core.h>
+#include <ChaosGL/tgeom_list.hpp>
+#include "Shape.hpp"
 
 int main(int argc, const char * argv[]) {
-	void* data = malloc(sizeof(float) + sizeof(double) + sizeof(int));
-	void* ptr = data;
 	
-	*((float*) ptr) = (float) 1.0;
-	
-	ptr = (void*)(((float*) ptr) + 1);
-	*((double*) ptr) = (double) 2.0;
-	
-	ptr = (void*)(((double*) ptr) + 1);
-	*((int*) ptr) = (int) 3;
-	
-	ptr = data;
-	log("%f\n", *((float*) ptr));
-	
-	ptr = (void*)(((float*) ptr) + 1);
-	log("%f\n", *((double*) ptr));
-	
-	ptr = (void*)(((double*) ptr) + 1);
-	log("%i\n", *((int*) ptr));
+	creategl::Shape<float>* shape = new creategl::Shape<float>();
+//	creategl::Shape<chaosgl::geom>* shape = new creategl::Shape<chaosgl::geom>();
+//	void* data = malloc(sizeof(float) + sizeof(double) + sizeof(int));
+//	void* ptr = data;
+//	
+//	*((float*) ptr) = (float) 1.0;
+//	
+//	ptr = (void*)(((float*) ptr) + 1);
+//	*((double*) ptr) = (double) 2.0;
+//	
+//	ptr = (void*)(((double*) ptr) + 1);
+//	*((int*) ptr) = (int) 3;
+//	
+//	ptr = data;
+//	log("%f\n", *((float*) ptr));
+//	
+//	ptr = (void*)(((float*) ptr) + 1);
+//	log("%f\n", *((double*) ptr));
+//	
+//	ptr = (void*)(((double*) ptr) + 1);
+//	log("%i\n", *((int*) ptr));
 
     return 0;
 }

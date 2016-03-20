@@ -6,7 +6,7 @@
 //  Copyright © 2016 Fu Lam Diep. All rights reserved.
 //
 
-#include "Rotation.hpp"
+#include "rotation.hpp"
 
 namespace creategl {	
 	

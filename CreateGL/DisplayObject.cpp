@@ -7,6 +7,7 @@
 //
 
 #include "DisplayObject.hpp"
+#include "Container.hpp"
 
 namespace creategl {
 	DisplayObject::~DisplayObject ()
@@ -51,7 +52,14 @@ namespace creategl {
 	}
 	
 	
-	glm::mat4 DisplayObject::getTransformationMatrix ()
+	glm::mat4 DisplayObject::getGlobalTransformation ()
+	{
+		if (_parent != nullptr) return _parent->getGlobalTransformation() * getLocalTransformation();
+		return getLocalTransformation();
+	}
+	
+	
+	glm::mat4 DisplayObject::getLocalTransformation ()
 	{
 		if (_translationIsDirty || _rotationIsDirty || _scalingIsDirty)
 		{
