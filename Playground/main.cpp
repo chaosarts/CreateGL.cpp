@@ -8,7 +8,7 @@
 
 #include <type_traits>
 #include <glm/glm.hpp>
-#include <ChaosCore/core.h>
+#include <ChaosCore/ChaosCore.hpp>
 #include <ChaosGL/tgeom_list.hpp>
 #include "Shape.hpp"
 

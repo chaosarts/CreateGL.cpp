@@ -49,7 +49,7 @@ namespace creategl {
 	
 	long Container::indexOf (creategl::DisplayObject *displayObject)
 	{
-		vector<DisplayObject*>::iterator it = _children.begin();
+		std::vector<DisplayObject*>::iterator it = _children.begin();
 		long i = 0;
 		while (it != _children.end())
 		{
@@ -86,7 +86,7 @@ namespace creategl {
 		if (index < 0 || index >= count()) return nullptr;
 		
 		DisplayObject* child = _children[index];
-		vector<DisplayObject*>::iterator it = (_children.begin() + index);
+		std::vector<DisplayObject*>::iterator it = (_children.begin() + index);
 		_children.erase(it);
 		
 		return child;
@@ -98,7 +98,7 @@ namespace creategl {
 		long index = indexOf(displayObject);
 		if (index < 0) return index;
 		
-		vector<DisplayObject*>::iterator it = (_children.begin() + index);
+		std::vector<DisplayObject*>::iterator it = (_children.begin() + index);
 		_children.erase(it);
 		
 		return index;

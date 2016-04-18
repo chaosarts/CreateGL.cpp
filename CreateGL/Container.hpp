@@ -14,15 +14,13 @@
 
 #include "DisplayObject.hpp"
 
-using namespace std;
-
 namespace creategl {
 	class Container : public DisplayObject
 	{
 	private:
 		
 		/** Provides a list of display objects */
-		vector<DisplayObject*> _children;
+		std::vector<DisplayObject*> _children;
 		
 	public:
 		/**
@@ -46,7 +44,7 @@ namespace creategl {
 		/**
 		 * Returns the list of children
 		 */
-		vector<DisplayObject*> getChildren () const;
+		std::vector<DisplayObject*> getChildren () const;
 		
 		
 		/**

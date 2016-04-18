@@ -32,6 +32,8 @@
 		C4AAD5C81C9266B500C25865 /* Shape.hpp in Headers */ = {isa = PBXBuildFile; fileRef = C4AAD5C61C9266B500C25865 /* Shape.hpp */; };
 		C4AAD6261C9475CF00C25865 /* libChaosCore.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = C4AAD58C1C91A92700C25865 /* libChaosCore.dylib */; };
 		C4AAD6271C9475CF00C25865 /* libChaosGL.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = C4AAD5741C91A87900C25865 /* libChaosGL.dylib */; };
+		C4B634F21C9F990C00D406C0 /* CreateGL.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C4B634F01C9F990C00D406C0 /* CreateGL.cpp */; };
+		C4B634F31C9F990C00D406C0 /* CreateGL.hpp in Headers */ = {isa = PBXBuildFile; fileRef = C4B634F11C9F990C00D406C0 /* CreateGL.hpp */; };
 		C4FE8F8E1C9C0A0900AECC8F /* Buffer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C4FE8F8C1C9C0A0900AECC8F /* Buffer.cpp */; };
 		C4FE8F8F1C9C0A0900AECC8F /* Buffer.hpp in Headers */ = {isa = PBXBuildFile; fileRef = C4FE8F8D1C9C0A0900AECC8F /* Buffer.hpp */; };
 /* End PBXBuildFile section */
@@ -139,6 +141,8 @@
 		C4AAD5C11C92631700C25865 /* Stage.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Stage.cpp; sourceTree = "<group>"; };
 		C4AAD5C21C92631700C25865 /* Stage.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Stage.hpp; sourceTree = "<group>"; };
 		C4AAD5C61C9266B500C25865 /* Shape.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Shape.hpp; sourceTree = "<group>"; };
+		C4B634F01C9F990C00D406C0 /* CreateGL.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CreateGL.cpp; sourceTree = "<group>"; };
+		C4B634F11C9F990C00D406C0 /* CreateGL.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = CreateGL.hpp; sourceTree = "<group>"; };
 		C4FE8F8C1C9C0A0900AECC8F /* Buffer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Buffer.cpp; sourceTree = "<group>"; };
 		C4FE8F8D1C9C0A0900AECC8F /* Buffer.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Buffer.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -204,6 +208,8 @@
 				C4AAD61C1C94748500C25865 /* Functions */,
 				C4AAD61D1C9474A000C25865 /* Interfaces */,
 				C4AAD5C91C92670200C25865 /* Structs */,
+				C4B634F01C9F990C00D406C0 /* CreateGL.cpp */,
+				C4B634F11C9F990C00D406C0 /* CreateGL.hpp */,
 			);
 			path = CreateGL;
 			sourceTree = "<group>";
@@ -293,6 +299,7 @@
 				C4AAD5C81C9266B500C25865 /* Shape.hpp in Headers */,
 				C4AAD5B51C91FCF100C25865 /* scaling.hpp in Headers */,
 				C4AAD59F1C91EC7F00C25865 /* TransformSequence.hpp in Headers */,
+				C4B634F31C9F990C00D406C0 /* CreateGL.hpp in Headers */,
 				C4AAD59B1C91C69400C25865 /* Container.hpp in Headers */,
 				C4AAD5971C91BD0B00C25865 /* bbox.hpp in Headers */,
 				C4AAD5931C91AA4B00C25865 /* DisplayObject.hpp in Headers */,
@@ -425,6 +432,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C4B634F21C9F990C00D406C0 /* CreateGL.cpp in Sources */,
 				C4AAD59A1C91C69400C25865 /* Container.cpp in Sources */,
 				C4AAD5921C91AA4B00C25865 /* DisplayObject.cpp in Sources */,
 				C4AAD5B41C91FCF100C25865 /* scaling.cpp in Sources */,
