@@ -23,54 +23,6 @@ namespace creategl {
 	{
 		friend class Container;
 		friend class Stage;
-	private:
-		
-		/** Indicates if the transformation needs an update */
-		bool _translationIsDirty = false;
-		
-		/** Indicates if the rotation needs an update */
-		bool _rotationIsDirty = false;
-		
-		/** Indicates if the scaling needs an update */
-		bool _scalingIsDirty = false;
-		
-		/** Provides the parent container */
-		Container* _parent = nullptr;
-		
-		/** Provides the stage in which the */
-		Stage* _stage = nullptr;
-		
-		/** Provides the position of the object */
-		glm::vec3 _position = glm::vec3(0);
-		
-		/** Provides the rotation of the object */
-		glm::quat _rotation = glm::quat(1.0, 0.0, 0.0, 0.0);
-		
-		/** Provides the scaling for each dimension */
-		glm::vec3 _scaling = glm::vec3(1.0, 1.0, 1.0);
-		
-		/** Provids the reference point to relate to for transformation */
-		glm::vec3 _reference = glm::vec3(0);
-		
-		/** Caches the translation matrix */
-		glm::mat4 _translationMatrixCache = glm::mat4(1.0);
-		
-		/** Caches the rotation matrix */
-		glm::mat4 _rotationMatrixCache = glm::mat4(1.0);
-		
-		/** Caches the scaling matrix */
-		glm::mat4 _scalingMatrixCache = glm::mat4(1.0);
-		
-		/** Caches the complete transformation matrix */
-		glm::mat4 _transformMatrixCache = glm::mat4(1.0);
-		
-	protected:
-		
-		/** Provides the bounding box */
-		bbox _bbox = bbox();
-		
-		/** Indicates, whether the box is obsolete or not */
-		bool _bboxIsDirty = false;
 		
 	public:
 		
@@ -228,6 +180,55 @@ namespace creategl {
 		 * Rotates the object around the x axis by given angle in rad
 		 */
 		glm::quat rotateZ (float rad);
+		
+	protected:
+		
+		/** Provides the bounding box */
+		bbox _bbox = bbox();
+		
+		/** Indicates, whether the box is obsolete or not */
+		bool _bboxIsDirty = false;
+		
+	private:
+		
+		/** Indicates if the transformation needs an update */
+		bool _translationIsDirty = false;
+		
+		/** Indicates if the rotation needs an update */
+		bool _rotationIsDirty = false;
+		
+		/** Indicates if the scaling needs an update */
+		bool _scalingIsDirty = false;
+		
+		/** Provides the parent container */
+		Container* _parent = nullptr;
+		
+		/** Provides the stage in which the */
+		Stage* _stage = nullptr;
+		
+		/** Provides the position of the object */
+		glm::vec3 _position = glm::vec3(0);
+		
+		/** Provides the rotation of the object */
+		glm::quat _rotation = glm::quat(1.0, 0.0, 0.0, 0.0);
+		
+		/** Provides the scaling for each dimension */
+		glm::vec3 _scaling = glm::vec3(1.0, 1.0, 1.0);
+		
+		/** Provids the reference point to relate to for transformation */
+		glm::vec3 _reference = glm::vec3(0);
+		
+		/** Caches the translation matrix */
+		glm::mat4 _translationMatrixCache = glm::mat4(1.0);
+		
+		/** Caches the rotation matrix */
+		glm::mat4 _rotationMatrixCache = glm::mat4(1.0);
+		
+		/** Caches the scaling matrix */
+		glm::mat4 _scalingMatrixCache = glm::mat4(1.0);
+		
+		/** Caches the complete transformation matrix */
+		glm::mat4 _transformMatrixCache = glm::mat4(1.0);
 	};
 }
 

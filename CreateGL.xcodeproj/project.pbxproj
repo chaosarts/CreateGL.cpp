@@ -7,7 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		C445482E1C99C9C10069E9F8 /* libCreateGL.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = C4AAD55F1C91A83A00C25865 /* libCreateGL.dylib */; };
+		C44BD0661CC5A20700F51AFA /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C44BD0651CC5A20700F51AFA /* main.cpp */; };
+		C44BD06A1CC5A21900F51AFA /* libCreateGL.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = C4AAD55F1C91A83A00C25865 /* libCreateGL.dylib */; };
+		C44BD06B1CC5A21900F51AFA /* libChaosCore.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = C4AAD58C1C91A92700C25865 /* libChaosCore.dylib */; };
+		C44BD06C1CC5A21900F51AFA /* libChaosGL.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = C4AAD5741C91A87900C25865 /* libChaosGL.dylib */; };
+		C44BD0751CC5A23D00F51AFA /* libgtest.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C44BD05D1CC5A1D900F51AFA /* libgtest.a */; };
+		C44BD0781CC5A40600F51AFA /* Shape.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C44BD0761CC5A40600F51AFA /* Shape.cpp */; };
+		C44BD0791CC5A40600F51AFA /* Shape.hpp in Headers */ = {isa = PBXBuildFile; fileRef = C44BD0771CC5A40600F51AFA /* Shape.hpp */; };
 		C4AAD5771C91A8A400C25865 /* libChaosGL.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = C4AAD5741C91A87900C25865 /* libChaosGL.dylib */; };
 		C4AAD57B1C91A8A500C25865 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C4AAD5791C91A8A500C25865 /* OpenGL.framework */; };
 		C4AAD58F1C91A93500C25865 /* libChaosCore.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = C4AAD58C1C91A92700C25865 /* libChaosCore.dylib */; };
@@ -26,12 +32,8 @@
 		C4AAD5B01C91FB0800C25865 /* rotation.hpp in Headers */ = {isa = PBXBuildFile; fileRef = C4AAD5AE1C91FB0800C25865 /* rotation.hpp */; };
 		C4AAD5B41C91FCF100C25865 /* scaling.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C4AAD5B21C91FCF100C25865 /* scaling.cpp */; };
 		C4AAD5B51C91FCF100C25865 /* scaling.hpp in Headers */ = {isa = PBXBuildFile; fileRef = C4AAD5B31C91FCF100C25865 /* scaling.hpp */; };
-		C4AAD5BD1C925BC300C25865 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C4AAD5BC1C925BC300C25865 /* main.cpp */; };
 		C4AAD5C31C92631700C25865 /* Stage.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C4AAD5C11C92631700C25865 /* Stage.cpp */; };
 		C4AAD5C41C92631700C25865 /* Stage.hpp in Headers */ = {isa = PBXBuildFile; fileRef = C4AAD5C21C92631700C25865 /* Stage.hpp */; };
-		C4AAD5C81C9266B500C25865 /* Shape.hpp in Headers */ = {isa = PBXBuildFile; fileRef = C4AAD5C61C9266B500C25865 /* Shape.hpp */; };
-		C4AAD6261C9475CF00C25865 /* libChaosCore.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = C4AAD58C1C91A92700C25865 /* libChaosCore.dylib */; };
-		C4AAD6271C9475CF00C25865 /* libChaosGL.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = C4AAD5741C91A87900C25865 /* libChaosGL.dylib */; };
 		C4B634F21C9F990C00D406C0 /* CreateGL.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C4B634F01C9F990C00D406C0 /* CreateGL.cpp */; };
 		C4B634F31C9F990C00D406C0 /* CreateGL.hpp in Headers */ = {isa = PBXBuildFile; fileRef = C4B634F11C9F990C00D406C0 /* CreateGL.hpp */; };
 		C4FE8F8E1C9C0A0900AECC8F /* Buffer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C4FE8F8C1C9C0A0900AECC8F /* Buffer.cpp */; };
@@ -39,12 +41,40 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		C445482C1C99C9B80069E9F8 /* PBXContainerItemProxy */ = {
+		C44BD0591CC5A1AB00F51AFA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C4AAD5871C91A92700C25865 /* ChaosCore.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = C4AB85931CC4451F00A69438;
+			remoteInfo = ChaosCoreTest;
+		};
+		C44BD06D1CC5A22400F51AFA /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = C4AAD5571C91A83A00C25865 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = C4AAD55E1C91A83A00C25865;
 			remoteInfo = CreateGL;
+		};
+		C44BD06F1CC5A22400F51AFA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C4AAD5871C91A92700C25865 /* ChaosCore.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = C4E4E6471C8F24AA00AC2C72;
+			remoteInfo = ChaosCore;
+		};
+		C44BD0711CC5A22400F51AFA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C4AAD56D1C91A87900C25865 /* ChaosGL.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = C4E4E6221C8F23E400AC2C72;
+			remoteInfo = ChaosGL;
+		};
+		C44BD0731CC5A22400F51AFA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C4AAD5871C91A92700C25865 /* ChaosCore.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = C4E4E6471C8F24AA00AC2C72;
+			remoteInfo = ChaosCore;
 		};
 		C4AAD5731C91A87900C25865 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -88,24 +118,10 @@
 			remoteGlobalIDString = C4AAD5E61C9449B300C25865;
 			remoteInfo = Playground;
 		};
-		C4AAD6221C9475C000C25865 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = C4AAD5871C91A92700C25865 /* ChaosCore.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = C4E4E6471C8F24AA00AC2C72;
-			remoteInfo = ChaosCore;
-		};
-		C4AAD6241C9475C000C25865 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = C4AAD56D1C91A87900C25865 /* ChaosGL.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = C4E4E6221C8F23E400AC2C72;
-			remoteInfo = ChaosGL;
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		C4AAD5B81C925BC300C25865 /* CopyFiles */ = {
+		C44BD0611CC5A20700F51AFA /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = /usr/share/man/man1/;
@@ -117,6 +133,11 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		C44BD05D1CC5A1D900F51AFA /* libgtest.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libgtest.a; path = ../../../../../../../opt/local/lib/libgtest.a; sourceTree = "<group>"; };
+		C44BD0631CC5A20700F51AFA /* CreateGLTest */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = CreateGLTest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C44BD0651CC5A20700F51AFA /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		C44BD0761CC5A40600F51AFA /* Shape.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Shape.cpp; sourceTree = "<group>"; };
+		C44BD0771CC5A40600F51AFA /* Shape.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Shape.hpp; sourceTree = "<group>"; };
 		C4AAD55F1C91A83A00C25865 /* libCreateGL.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = libCreateGL.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 		C4AAD56D1C91A87900C25865 /* ChaosGL.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ChaosGL.xcodeproj; path = ../ChaosGL/ChaosGL.xcodeproj; sourceTree = "<group>"; };
 		C4AAD5791C91A8A500C25865 /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
@@ -136,11 +157,8 @@
 		C4AAD5AE1C91FB0800C25865 /* rotation.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = rotation.hpp; sourceTree = "<group>"; };
 		C4AAD5B21C91FCF100C25865 /* scaling.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = scaling.cpp; sourceTree = "<group>"; };
 		C4AAD5B31C91FCF100C25865 /* scaling.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = scaling.hpp; sourceTree = "<group>"; };
-		C4AAD5BA1C925BC300C25865 /* Playground */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Playground; sourceTree = BUILT_PRODUCTS_DIR; };
-		C4AAD5BC1C925BC300C25865 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		C4AAD5C11C92631700C25865 /* Stage.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Stage.cpp; sourceTree = "<group>"; };
 		C4AAD5C21C92631700C25865 /* Stage.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Stage.hpp; sourceTree = "<group>"; };
-		C4AAD5C61C9266B500C25865 /* Shape.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Shape.hpp; sourceTree = "<group>"; };
 		C4B634F01C9F990C00D406C0 /* CreateGL.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CreateGL.cpp; sourceTree = "<group>"; };
 		C4B634F11C9F990C00D406C0 /* CreateGL.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = CreateGL.hpp; sourceTree = "<group>"; };
 		C4FE8F8C1C9C0A0900AECC8F /* Buffer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Buffer.cpp; sourceTree = "<group>"; };
@@ -148,6 +166,17 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		C44BD0601CC5A20700F51AFA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C44BD0751CC5A23D00F51AFA /* libgtest.a in Frameworks */,
+				C44BD06A1CC5A21900F51AFA /* libCreateGL.dylib in Frameworks */,
+				C44BD06B1CC5A21900F51AFA /* libChaosCore.dylib in Frameworks */,
+				C44BD06C1CC5A21900F51AFA /* libChaosGL.dylib in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		C4AAD55C1C91A83A00C25865 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -158,35 +187,33 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		C4AAD5B71C925BC300C25865 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				C445482E1C99C9C10069E9F8 /* libCreateGL.dylib in Frameworks */,
-				C4AAD6261C9475CF00C25865 /* libChaosCore.dylib in Frameworks */,
-				C4AAD6271C9475CF00C25865 /* libChaosGL.dylib in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
 		C44548281C99C7730069E9F8 /* Templates */ = {
 			isa = PBXGroup;
 			children = (
-				C4AAD5C61C9266B500C25865 /* Shape.hpp */,
 			);
 			name = Templates;
+			sourceTree = "<group>";
+		};
+		C44BD0641CC5A20700F51AFA /* CreateGLTest */ = {
+			isa = PBXGroup;
+			children = (
+				C44BD0651CC5A20700F51AFA /* main.cpp */,
+			);
+			path = CreateGLTest;
 			sourceTree = "<group>";
 		};
 		C4AAD5561C91A83A00C25865 = {
 			isa = PBXGroup;
 			children = (
+				C44BD05D1CC5A1D900F51AFA /* libgtest.a */,
 				C4AAD5791C91A8A500C25865 /* OpenGL.framework */,
 				C4AAD5871C91A92700C25865 /* ChaosCore.xcodeproj */,
 				C4AAD56D1C91A87900C25865 /* ChaosGL.xcodeproj */,
 				C4AAD5611C91A83A00C25865 /* CreateGL */,
-				C4AAD5BB1C925BC300C25865 /* Playground */,
+				C44BD0641CC5A20700F51AFA /* CreateGLTest */,
 				C4AAD5601C91A83A00C25865 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -195,7 +222,7 @@
 			isa = PBXGroup;
 			children = (
 				C4AAD55F1C91A83A00C25865 /* libCreateGL.dylib */,
-				C4AAD5BA1C925BC300C25865 /* Playground */,
+				C44BD0631CC5A20700F51AFA /* CreateGLTest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -218,8 +245,8 @@
 			isa = PBXGroup;
 			children = (
 				C4AAD5741C91A87900C25865 /* libChaosGL.dylib */,
-				C4AAD5761C91A87900C25865 /* ChaosGLTest */,
 				C4AAD61B1C94746500C25865 /* Playground */,
+				C4AAD5761C91A87900C25865 /* ChaosGLTest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -228,6 +255,7 @@
 			isa = PBXGroup;
 			children = (
 				C4AAD58C1C91A92700C25865 /* libChaosCore.dylib */,
+				C44BD05A1CC5A1AB00F51AFA /* ChaosCoreTest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -241,20 +269,14 @@
 				C4AAD5991C91C69400C25865 /* Container.hpp */,
 				C4AAD5901C91AA4B00C25865 /* DisplayObject.cpp */,
 				C4AAD5911C91AA4B00C25865 /* DisplayObject.hpp */,
+				C44BD0761CC5A40600F51AFA /* Shape.cpp */,
+				C44BD0771CC5A40600F51AFA /* Shape.hpp */,
 				C4AAD5C11C92631700C25865 /* Stage.cpp */,
 				C4AAD5C21C92631700C25865 /* Stage.hpp */,
 				C4AAD59C1C91EC7F00C25865 /* TransformSequence.cpp */,
 				C4AAD59D1C91EC7F00C25865 /* TransformSequence.hpp */,
 			);
 			name = Classes;
-			sourceTree = "<group>";
-		};
-		C4AAD5BB1C925BC300C25865 /* Playground */ = {
-			isa = PBXGroup;
-			children = (
-				C4AAD5BC1C925BC300C25865 /* main.cpp */,
-			);
-			path = Playground;
 			sourceTree = "<group>";
 		};
 		C4AAD5C91C92670200C25865 /* Structs */ = {
@@ -296,7 +318,6 @@
 			files = (
 				C4AAD5B01C91FB0800C25865 /* rotation.hpp in Headers */,
 				C4AAD5AC1C91EFFA00C25865 /* translation.hpp in Headers */,
-				C4AAD5C81C9266B500C25865 /* Shape.hpp in Headers */,
 				C4AAD5B51C91FCF100C25865 /* scaling.hpp in Headers */,
 				C4AAD59F1C91EC7F00C25865 /* TransformSequence.hpp in Headers */,
 				C4B634F31C9F990C00D406C0 /* CreateGL.hpp in Headers */,
@@ -304,6 +325,7 @@
 				C4AAD5971C91BD0B00C25865 /* bbox.hpp in Headers */,
 				C4AAD5931C91AA4B00C25865 /* DisplayObject.hpp in Headers */,
 				C4AAD5A81C91EF7000C25865 /* Transformation.hpp in Headers */,
+				C44BD0791CC5A40600F51AFA /* Shape.hpp in Headers */,
 				C4FE8F8F1C9C0A0900AECC8F /* Buffer.hpp in Headers */,
 				C4AAD5C41C92631700C25865 /* Stage.hpp in Headers */,
 			);
@@ -312,6 +334,27 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		C44BD0621CC5A20700F51AFA /* CreateGLTest */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C44BD0671CC5A20700F51AFA /* Build configuration list for PBXNativeTarget "CreateGLTest" */;
+			buildPhases = (
+				C44BD05F1CC5A20700F51AFA /* Sources */,
+				C44BD0601CC5A20700F51AFA /* Frameworks */,
+				C44BD0611CC5A20700F51AFA /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C44BD06E1CC5A22400F51AFA /* PBXTargetDependency */,
+				C44BD0701CC5A22400F51AFA /* PBXTargetDependency */,
+				C44BD0721CC5A22400F51AFA /* PBXTargetDependency */,
+				C44BD0741CC5A22400F51AFA /* PBXTargetDependency */,
+			);
+			name = CreateGLTest;
+			productName = CreateGLTest;
+			productReference = C44BD0631CC5A20700F51AFA /* CreateGLTest */;
+			productType = "com.apple.product-type.tool";
+		};
 		C4AAD55E1C91A83A00C25865 /* CreateGL */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = C4AAD56A1C91A83A00C25865 /* Build configuration list for PBXNativeTarget "CreateGL" */;
@@ -331,26 +374,6 @@
 			productReference = C4AAD55F1C91A83A00C25865 /* libCreateGL.dylib */;
 			productType = "com.apple.product-type.library.dynamic";
 		};
-		C4AAD5B91C925BC300C25865 /* Playground */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = C4AAD5BE1C925BC300C25865 /* Build configuration list for PBXNativeTarget "Playground" */;
-			buildPhases = (
-				C4AAD5B61C925BC300C25865 /* Sources */,
-				C4AAD5B71C925BC300C25865 /* Frameworks */,
-				C4AAD5B81C925BC300C25865 /* CopyFiles */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				C445482D1C99C9B80069E9F8 /* PBXTargetDependency */,
-				C4AAD6231C9475C000C25865 /* PBXTargetDependency */,
-				C4AAD6251C9475C000C25865 /* PBXTargetDependency */,
-			);
-			name = Playground;
-			productName = Playground;
-			productReference = C4AAD5BA1C925BC300C25865 /* Playground */;
-			productType = "com.apple.product-type.tool";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -360,10 +383,10 @@
 				LastUpgradeCheck = 0720;
 				ORGANIZATIONNAME = "Fu Lam Diep";
 				TargetAttributes = {
-					C4AAD55E1C91A83A00C25865 = {
-						CreatedOnToolsVersion = 7.2.1;
+					C44BD0621CC5A20700F51AFA = {
+						CreatedOnToolsVersion = 7.3;
 					};
-					C4AAD5B91C925BC300C25865 = {
+					C4AAD55E1C91A83A00C25865 = {
 						CreatedOnToolsVersion = 7.2.1;
 					};
 				};
@@ -391,12 +414,19 @@
 			projectRoot = "";
 			targets = (
 				C4AAD55E1C91A83A00C25865 /* CreateGL */,
-				C4AAD5B91C925BC300C25865 /* Playground */,
+				C44BD0621CC5A20700F51AFA /* CreateGLTest */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
+		C44BD05A1CC5A1AB00F51AFA /* ChaosCoreTest */ = {
+			isa = PBXReferenceProxy;
+			fileType = "compiled.mach-o.executable";
+			path = ChaosCoreTest;
+			remoteRef = C44BD0591CC5A1AB00F51AFA /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
 		C4AAD5741C91A87900C25865 /* libChaosGL.dylib */ = {
 			isa = PBXReferenceProxy;
 			fileType = "compiled.mach-o.dylib";
@@ -428,11 +458,20 @@
 /* End PBXReferenceProxy section */
 
 /* Begin PBXSourcesBuildPhase section */
+		C44BD05F1CC5A20700F51AFA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C44BD0661CC5A20700F51AFA /* main.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		C4AAD55B1C91A83A00C25865 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				C4B634F21C9F990C00D406C0 /* CreateGL.cpp in Sources */,
+				C44BD0781CC5A40600F51AFA /* Shape.cpp in Sources */,
 				C4AAD59A1C91C69400C25865 /* Container.cpp in Sources */,
 				C4AAD5921C91AA4B00C25865 /* DisplayObject.cpp in Sources */,
 				C4AAD5B41C91FCF100C25865 /* scaling.cpp in Sources */,
@@ -445,21 +484,28 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		C4AAD5B61C925BC300C25865 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				C4AAD5BD1C925BC300C25865 /* main.cpp in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		C445482D1C99C9B80069E9F8 /* PBXTargetDependency */ = {
+		C44BD06E1CC5A22400F51AFA /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = C4AAD55E1C91A83A00C25865 /* CreateGL */;
-			targetProxy = C445482C1C99C9B80069E9F8 /* PBXContainerItemProxy */;
+			targetProxy = C44BD06D1CC5A22400F51AFA /* PBXContainerItemProxy */;
+		};
+		C44BD0701CC5A22400F51AFA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = ChaosCore;
+			targetProxy = C44BD06F1CC5A22400F51AFA /* PBXContainerItemProxy */;
+		};
+		C44BD0721CC5A22400F51AFA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = ChaosGL;
+			targetProxy = C44BD0711CC5A22400F51AFA /* PBXContainerItemProxy */;
+		};
+		C44BD0741CC5A22400F51AFA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = ChaosCore;
+			targetProxy = C44BD0731CC5A22400F51AFA /* PBXContainerItemProxy */;
 		};
 		C4AAD5841C91A8D400C25865 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -471,19 +517,33 @@
 			name = ChaosCore;
 			targetProxy = C4AAD58D1C91A93100C25865 /* PBXContainerItemProxy */;
 		};
-		C4AAD6231C9475C000C25865 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = ChaosCore;
-			targetProxy = C4AAD6221C9475C000C25865 /* PBXContainerItemProxy */;
-		};
-		C4AAD6251C9475C000C25865 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = ChaosGL;
-			targetProxy = C4AAD6241C9475C000C25865 /* PBXContainerItemProxy */;
-		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		C44BD0681CC5A20700F51AFA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/opt/local/lib,
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		C44BD0691CC5A20700F51AFA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/opt/local/lib,
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 		C4AAD5681C91A83A00C25865 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -524,6 +584,7 @@
 					/opt/local/include,
 					../ChaosCore,
 					../ChaosGL,
+					../CreateGL,
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				MTL_ENABLE_DEBUG_INFO = YES;
@@ -566,6 +627,7 @@
 					/opt/local/include,
 					../ChaosCore,
 					../ChaosGL,
+					../CreateGL,
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				MTL_ENABLE_DEBUG_INFO = NO;
@@ -599,35 +661,18 @@
 			};
 			name = Release;
 		};
-		C4AAD5BF1C925BC300C25865 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				HEADER_SEARCH_PATHS = (
-					/opt/local/include,
-					../ChaosCore,
-					../ChaosGL,
-					../CreateGL,
-				);
-				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = Debug;
-		};
-		C4AAD5C01C925BC300C25865 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				HEADER_SEARCH_PATHS = (
-					/opt/local/include,
-					../ChaosCore,
-					../ChaosGL,
-					../CreateGL,
-				);
-				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		C44BD0671CC5A20700F51AFA /* Build configuration list for PBXNativeTarget "CreateGLTest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C44BD0681CC5A20700F51AFA /* Debug */,
+				C44BD0691CC5A20700F51AFA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		C4AAD55A1C91A83A00C25865 /* Build configuration list for PBXProject "CreateGL" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -642,15 +687,6 @@
 			buildConfigurations = (
 				C4AAD56B1C91A83A00C25865 /* Debug */,
 				C4AAD56C1C91A83A00C25865 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		C4AAD5BE1C925BC300C25865 /* Build configuration list for PBXNativeTarget "Playground" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				C4AAD5BF1C925BC300C25865 /* Debug */,
-				C4AAD5C01C925BC300C25865 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
